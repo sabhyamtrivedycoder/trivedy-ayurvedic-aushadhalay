@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivedy Ayurvedic Ayushdhalay | Authentic Ayurvedic Medicines in Raj Dhanwar</title>
+    <meta name="description" content="Trivedy Ayurvedic Ayushdhalay - Serving authentic Ayurvedic medicines, herbal remedies, and natural wellness products in Raj Dhanwar, Giridih.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Color Palette */
+            --primary-green: #2d5016;
+            --light-green: #4a7c3f;
+            --gold: #d4a017;
+            --light-gold: #e8a317;
+            --brown: #5c3317;
+            --cream: #f5f0e1;
+            --maroon: #800020;
+            --text-dark: #333333;
+            --text-light: #f5f5f5;
+            
+            /* Typography */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Poppins', sans-serif;
+            
+            /* Transitions */
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-green);
+        }
+
+        .section-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 3rem;
+            color: var(--gold);
+            font-size: 1.5rem;
+        }
+
+        .section-divider::before,
+        .section-divider::after {
+            content: '';
+            height: 2px;
+            width: 50px;
+            background-color: var(--gold);
+            margin: 0 15px;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        nav.scrolled {
+            background-color: var(--primary-green);
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav.scrolled .nav-link, 
+        nav.scrolled .logo-text {
+            color: var(--text-light);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav.scrolled .logo-text {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--primary-green);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 1.5rem;
+            color: var(--primary-green);
+        }
+        
+        nav.scrolled .hamburger {
+            color: var(--cream);
+        }
+
+        /* Hero Section */
+        #home {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(rgba(45, 80, 22, 0.8), rgba(92, 51, 23, 0.8)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80') center/cover no-repeat;
+            padding: 0;
+            margin-top: 0;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: var(--text-light);
+            z-index: 1;
+            width: 100%;
+            padding: 0 2rem;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 2rem;
+            font-family: var(--font-heading);
+            margin-bottom: 2rem;
+            font-style: italic;
+            color: var(--cream);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: var(--gold);
+            color: var(--text-dark);
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            border: 2px solid var(--gold);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+
+        /* About Section */
+        #about {
+            background-color: var(--cream);
+            position: relative;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .about-image::before {
+            content: '';
+            display: block;
+            padding-top: 75%;
+        }
+
+        .about-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .decorative-border {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background-image: radial-gradient(var(--light-green) 15%, transparent 16%),
+            radial-gradient(var(--light-green) 15%, transparent 16%);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            opacity: 0.1;
+        }
+
+        /* Products Section */
+        #products {
+            background-color: #fff;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-color: var(--cream);
+            padding: 2.5rem 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(45, 80, 22, 0.1);
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(45, 80, 22, 0.1);
+            border-color: var(--light-green);
+        }
+
+        .product-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .product-title {
+            font-size: 1.25rem;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Brand Medicines & Products */
+        .brand-section-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 3.5rem 0 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid var(--gold);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .brand-logo-badge {
+            background: #fff;
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(45,80,22,0.15);
+        }
+
+        .brand-tagline {
+            font-size: 0.95rem;
+            color: var(--brown);
+            font-style: italic;
+        }
+
+        .medicines-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .med-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid rgba(45, 80, 22, 0.12);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+
+        .med-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 25px rgba(45, 80, 22, 0.12);
+            border-color: var(--gold);
+        }
+
+        .med-badge {
+            display: inline-block;
+            background: #eef5e8;
+            color: var(--primary-green);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-bottom: 0.8rem;
+            align-self: flex-start;
+        }
+
+        .med-badge.dabur {
+            background: #fdf5e6;
+            color: #b86200;
+        }
+
+        .med-badge.classic {
+            background: #fdf0ed;
+            color: #800020;
+        }
+
+        .med-name {
+            font-size: 1.2rem;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+            font-family: var(--font-heading);
+            font-weight: 600;
+        }
+
+        .med-desc {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .med-action {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 0.8rem;
+            border-top: 1px dashed #eee;
+            margin-top: auto;
+        }
+
+        .btn-wa-sm {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #25D366;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 20px;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-wa-sm:hover {
+            background: #128C7E;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Location Gallery & Google Maps */
+        .gmaps-highlight-card {
+            background: linear-gradient(135deg, #2d5016, #1e360f);
+            color: #fff;
+            padding: 2.5rem;
+            border-radius: 14px;
+            margin-bottom: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            box-shadow: 0 10px 30px rgba(45, 80, 22, 0.25);
+        }
+
+        .gmaps-highlight-info h3 {
+            color: var(--gold);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .gmaps-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-gmaps {
+            background: var(--gold);
+            color: #222;
+            padding: 0.8rem 1.6rem;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-gmaps:hover {
+            background: #fff;
+            color: var(--primary-green);
+            transform: translateY(-2px);
+        }
+
+        .btn-gmaps-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid var(--gold);
+            padding: 0.8rem 1.6rem;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-gmaps-outline:hover {
+            background: var(--gold);
+            color: #222;
+        }
+
+        .location-photos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .loc-photo-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            transition: var(--transition);
+            border: 1px solid rgba(45, 80, 22, 0.08);
+        }
+
+        .loc-photo-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .loc-photo-img-wrap {
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .loc-photo-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .loc-photo-card:hover .loc-photo-img-wrap img {
+            transform: scale(1.08);
+        }
+
+        .loc-photo-tag {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(45, 80, 22, 0.85);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            backdrop-filter: blur(4px);
+        }
+
+        .loc-photo-body {
+            padding: 1.2rem;
+        }
+
+        .loc-photo-body h4 {
+            color: var(--primary-green);
+            font-size: 1.15rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .loc-photo-body p {
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        /* Why Choose Us */
+        #features {
+            background-color: var(--primary-green);
+            color: var(--text-light);
+        }
+
+        #features .section-title {
+            color: var(--gold);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 1.5rem;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--gold);
+        }
+
+        .feature-title {
+            color: var(--cream);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Brands Section */
+        #brands {
+            background-color: var(--cream);
+            text-align: center;
+        }
+
+        .brands-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .brand-item {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--brown);
+            padding: 1rem 2rem;
+            background: #fff;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .brand-item:hover {
+            transform: scale(1.05);
+            color: var(--primary-green);
+        }
+
+        /* Testimonials */
+        #testimonials {
+            background-color: #fff;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--cream);
+            padding: 2rem;
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .quote-icon {
+            font-size: 4rem;
+            color: rgba(212, 160, 23, 0.2);
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-family: serif;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background-color: var(--light-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: var(--primary-green);
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: var(--cream);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .info-icon {
+            font-size: 2rem;
+            color: var(--primary-green);
+        }
+
+        .info-title {
+            font-size: 1.2rem;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form {
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 2px rgba(45, 80, 22, 0.1);
+        }
+        
+        .map-container {
+            margin-top: 3rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--text-light);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-title {
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #aaa;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+            color: white;
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            .about-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background-color: var(--primary-green);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+            }
+
+            .nav-links.active {
+                right: 0;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            }
+
+            .nav-link {
+                color: var(--cream);
+                font-size: 1.2rem;
+            }
+            
+            nav.scrolled .nav-link {
+                color: var(--cream);
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo-text">
+                🌿 Trivedy Ayurvedic
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#clinic" class="nav-link">Patient Checkup</a></li>
+                <li><a href="#medicines" class="nav-link">Baidyanath & Dabur</a></li>
+                <li><a href="#location" class="nav-link">Shop & Photos</a></li>
+                <li><a href="#reviews" class="nav-link">Google Reviews (5.0★)</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="hamburger">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="hero-content">
+            <div class="reveal" style="display: inline-block; background: rgba(0,0,0,0.55); border: 1px solid var(--gold); padding: 6px 20px; border-radius: 30px; font-size: 0.95rem; color: var(--gold); margin-bottom: 1.2rem; backdrop-filter: blur(5px);">
+                🏥 In-Clinic Patient Checkup (नाड़ी परीक्षण) & Ayurvedic Pharmacy | Hatia Road, Raj Dhanwar
+            </div>
+            <h1 class="hero-title reveal">Trivedy Ayurvedic Ayushdhalay</h1>
+            <p class="hero-subtitle reveal">प्रकृति की शक्ति, आयुर्वेद का विश्वास</p>
+            <div class="reveal" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                <a href="#clinic" class="btn">🩺 Patient Checkup & Clinic</a>
+                <a href="#medicines" class="btn" style="background: transparent; border-color: var(--gold); color: var(--gold);">💊 Our Medicines</a>
+            </div>
+            <div class="reveal" style="display: inline-block; background: rgba(128, 0, 32, 0.85); color: #fff; padding: 6px 18px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; border: 1px solid rgba(255,255,255,0.3);">
+                ⚠️ Notice: In-Store Purchase & Clinic Visit Only. We do NOT provide home delivery.
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title reveal">About Us</h2>
+            <div class="section-divider reveal">🍃</div>
+            
+            <div class="about-grid">
+                <div class="about-image reveal">
+                    <img src="images/shop_front.jpg" alt="Trivedy Ayurvedic Ayushdhalay Hatia Road Rajdhanwar">
+                </div>
+                <div class="about-text reveal">
+                    <h3 style="color: var(--gold); font-size: 1.8rem;">A Legacy of Healing & Wellness in Raj Dhanwar</h3>
+                    <p>Welcome to <strong>Trivedy Ayurvedic Ayushdhalay</strong>, your premier center for authentic Ayurvedic healing, patient checkups, and genuine herbal medicines. Located on Hatia Road, near Maheswari Palace, we have been serving the Raj Dhanwar community with dedicated healthcare.</p>
+                    <p>Unlike commercial stores, our medicines are our own verified pharmacy stock — carefully chosen classical formulations from Shree Baidyanath, Dabur, and respected Ayurvedic pharmacies. Every medicine is 100% genuine and stored under optimal herbal conditions.</p>
+                    <p>We do <strong>NOT</strong> provide home delivery. All medicines and clinical consultations are provided exclusively in-person at our shop and clinic, ensuring you receive the correct diagnosis and authentic remedy.</p>
+                </div>
+            </div>
+        </div>
+        <div class="decorative-border"></div>
+    </section>
+
+    <!-- Patient Examination & Clinic Section -->
+    <section id="clinic" style="background-color: #fff;">
+        <div class="container">
+            <h2 class="section-title reveal">Patient Checkup & Clinical Care</h2>
+            <div class="section-divider reveal">🩺</div>
+            <p class="reveal" style="text-align: center; max-width: 750px; margin: -1.5rem auto 3rem; color: #555; font-size: 1.05rem;">
+                रोगी जांच एवं नाड़ी परीक्षण | Experience traditional Ayurvedic diagnosis and compassionate patient care at our Hatia Road clinic.
+            </p>
+
+            <div class="about-grid" style="align-items: flex-start;">
+                <div class="about-image reveal" style="border-radius: 12px; overflow: hidden; box-shadow: 0 15px 35px rgba(45,80,22,0.15);">
+                    <img src="images/patient_checkup.jpg" alt="Ayurvedic Doctor Checking Patient Pulse - Nadi Parikshan" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="about-text reveal">
+                    <div style="display: inline-block; background: #eef5e8; color: var(--primary-green); font-size: 0.8rem; font-weight: 700; padding: 4px 14px; border-radius: 20px; margin-bottom: 0.8rem; text-transform: uppercase;">In-Clinic Consultations</div>
+                    <h3 style="color: var(--primary-green); font-size: 1.8rem; margin-bottom: 1rem;">Comprehensive Patient Checkup & Diagnosis</h3>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 1.2rem;">
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span style="font-size: 1.5rem; color: var(--gold);">✋</span>
+                            <div>
+                                <h4 style="color: var(--primary-green); margin-bottom: 0.2rem; font-size: 1.15rem;">नाड़ी परीक्षण (Nadi Parikshan - Pulse Diagnosis)</h4>
+                                <p style="font-size: 0.92rem; color: #555; margin: 0;">Traditional pulse reading to identify Tridosha imbalances (Vata, Pitta, Kapha) and root causes of chronic ailments before symptoms advance.</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span style="font-size: 1.5rem; color: var(--gold);">🩺</span>
+                            <div>
+                                <h4 style="color: var(--primary-green); margin-bottom: 0.2rem; font-size: 1.15rem;">General Health & Vital Examination</h4>
+                                <p style="font-size: 0.92rem; color: #555; margin: 0;">Blood pressure examination, digestive health assessment, respiratory check, and general health monitoring for adults, women, and elders.</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span style="font-size: 1.5rem; color: var(--gold);">🌿</span>
+                            <div>
+                                <h4 style="color: var(--primary-green); margin-bottom: 0.2rem; font-size: 1.15rem;">Personalized Herbal Treatment Plans</h4>
+                                <p style="font-size: 0.92rem; color: #555; margin: 0;">Tailored prescriptions for joint pain, arthritis, sciatica, chronic acidity, liver disorders, skin problems, diabetes management, and seasonal allergies.</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span style="font-size: 1.5rem; color: var(--gold);">🕒</span>
+                            <div>
+                                <h4 style="color: var(--primary-green); margin-bottom: 0.2rem; font-size: 1.15rem;">Clinic Timings & Walk-In Details</h4>
+                                <p style="font-size: 0.92rem; color: #555; margin: 0;"><strong>Mon - Sat:</strong> 8:00 AM - 1:00 PM & 4:00 PM - 8:30 PM<br><strong>Sunday:</strong> 9:00 AM - 2:00 PM<br><span style="color: var(--gold); font-weight: 600;">Walk-ins welcome directly at Hatia Road clinic.</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 1.8rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="tel:+918102814677" class="btn" style="padding: 0.8rem 1.6rem; font-size: 0.9rem;">📞 Call Clinic: 8102814677</a>
+                        <a href="#location" class="btn" style="background: transparent; color: var(--primary-green); border-color: var(--primary-green); padding: 0.8rem 1.6rem; font-size: 0.9rem;">📍 View Clinic Location</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products & Services -->
+    <section id="products">
+        <div class="container">
+            <h2 class="section-title reveal">Our Products & Services</h2>
+            <div class="section-divider reveal">💊</div>
+            
+            <div class="products-grid">
+                <div class="product-card reveal">
+                    <div class="product-icon">🏺</div>
+                    <h3 class="product-title">Classical Medicines</h3>
+                    <p>Authentic classical Ayurvedic formulations including Bhasmas, Asavas, and Arishtas.</p>
+                </div>
+                <div class="product-card reveal">
+                    <div class="product-icon">🌱</div>
+                    <h3 class="product-title">Herbal Supplements</h3>
+                    <p>Natural supplements for daily wellness, vitality, and nutritional support.</p>
+                </div>
+                <div class="product-card reveal">
+                    <div class="product-icon">💆‍♀️</div>
+                    <h3 class="product-title">Skin & Hair Care</h3>
+                    <p>Chemical-free, herbal solutions for glowing skin and healthy hair.</p>
+                </div>
+                <div class="product-card reveal">
+                    <div class="product-icon">🌿</div>
+                    <h3 class="product-title">Digestive Health</h3>
+                    <p>Effective remedies for acidity, indigestion, and optimal gut health.</p>
+                </div>
+                <div class="product-card reveal">
+                    <div class="product-icon">🦵</div>
+                    <h3 class="product-title">Pain Relief</h3>
+                    <p>Potent oils and ointments for joint care and muscular pain relief.</p>
+                </div>
+                <div class="product-card reveal">
+                    <div class="product-icon">🛡️</div>
+                    <h3 class="product-title">Immunity Boosters</h3>
+                    <p>Chyawanprash, Giloy, and other supplements to build strong immunity.</p>
+                </div>
+                <div class="product-card reveal">
+                    <div class="product-icon">🩺</div>
+                    <h3 class="product-title">Diabetes Management</h3>
+                    <p>Natural care for blood sugar regulation and blood pressure management.</p>
+                </div>
+                <div class="product-card reveal">
+                    <div class="product-icon">👨‍⚕️</div>
+                    <h3 class="product-title">Expert Consultation</h3>
+                    <p>Personalized health guidance based on traditional Ayurvedic principles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Medicines: Baidyanath & Dabur -->
+    <section id="medicines" style="background-color: #faf7f0;">
+        <div class="container">
+            <h2 class="section-title reveal">Baidyanath, Dabur & Classical Medicines</h2>
+            <div class="section-divider reveal">🌿</div>
+            <p class="reveal" style="text-align: center; max-width: 750px; margin: -1.5rem auto 1.5rem; color: #555; font-size: 1.05rem;">
+                We stock the complete genuine range of <strong>Shree Baidyanath</strong>, <strong>Dabur</strong>, and classical Ayurvedic pharmacies. Fresh stock, authentic formulations, and MRP-discounted rates.
+            </p>
+            <div class="reveal" style="background: #fff3cd; border: 1px solid #ffeeba; color: #856404; padding: 12px 20px; border-radius: 8px; text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 0.95rem;">
+                <strong>⚠️ In-Store Purchase Only:</strong> All products are from our own verified inventory and must be purchased directly from our shop on Hatia Road, Raj Dhanwar. <u>We do not provide home delivery service</u>. You can WhatsApp us to check medicine availability before visiting!
+            </div>
+
+            <!-- Baidyanath Showcase -->
+            <div class="brand-section-heading reveal">
+                <div class="brand-logo-badge">
+                    <span>🌿</span> Shree Baidyanath
+                </div>
+                <div class="brand-tagline">100+ Years of Traditional Ayurvedic Excellence</div>
+            </div>
+
+            <div class="medicines-grid">
+                <div class="med-card reveal">
+                    <div>
+                        <span class="med-badge">Immunity & Stamina</span>
+                        <h4 class="med-name">Baidyanath Chyawanprash Special</h4>
+                        <p class="med-desc">Formulated with fresh Amla, Swarna Bhasma, Kesar, and 52 potent herbs. Builds all-season immunity, respiratory strength, and vitality for the entire family.</p>
+                    </div>
+                    <div class="med-action">
+                        <span style="font-size: 0.85rem; font-weight: 600; color: var(--primary-green);">500g / 1kg / 2kg</span>
+                        <a href="https://wa.me/918102814677?text=Hello%20Trivedy%20Ayurvedic,%20I%20want%20to%20enquire%20about%20Baidyanath%20Chyawanprash%20Special." target="_blank" class="btn-wa-sm">Check Stock on WA</a>
+                    </div>
+                </div>
+
+                <div class="med-card reveal">
+                    <div>
+                        <span class="med-badge">Brain & Memory</span>
+                        <h4 class="med-name">Baidyanath Shankhpushpi Syrup</h4>
+                        <p class="med-desc">Classical brain tonic infused with Shankhpushpi and Brahmi. Enhances memory recall, mental concentration, and helps reduce mental stress and fatigue in students and professionals.</p>
+                    </div>
+                    <div class="med-action">
+                        <span style="font-size: 0.85rem; font-weight: 600; color: var(--primary-green);">200ml / 450ml</span>
+                        <a href="https://wa.me/918102814677?text=Hello%20Trivedy%20Ayurvedic,%20I%20want%20to%20enquire%20about%20Baidyanath%20Shankhpushpi." target="_blank" class="btn-wa-sm">Check Stock on WA</a>
+                    </div>
+                </div>
+
+                <div class="med-card reveal">
+                    <div>
+                        <span class="med-badge">Vitality & Strength</span>
+                        <h4 class="med-name">Baidyanath Ashwagandharishta</h4>
+                        <p class="med-desc">Classical self-generated herbal tonic. Relieves general weakness, physical exhaustion, and nervous debility. Restores restful sleep, energy, and muscle vigor.</p>
+                    </div>
+                    <div class="med-action">
+                        <span style="font-size: 0.85rem; font-weight: 600; color: var(--primary-green);">450ml Liquid</span>
+                        <a href="https://wa.me/918102814677?text=Hello%20Trivedy%20Ayurvedic,%20I%20want%20to%20enquire%20about%20Baidyanath%20Ashwagandharishta." target="_blank" class="btn-wa-sm">Check Stock on WA</a>
+                    </div>
+                </div>
+
+                <div class="med-card reveal">
+                    <div>
+                        <span class="med-badge">Digestion & Appetite</span>
+                        <h4 class="med-name">Baidyanath Drakshasava Special</h4>
+                        <p class="med-desc">Made from high-grade dry grapes (Draksha). Improves sluggish appetite, strengthens weak digestion, purifies blood, and aids quick recovery from chronic illness.</p>
+                    </div>
+                    <div class="med-action">
+                        <span style="font-size: 0.85rem; font-weight: 600; color: var(--primary-green);">450ml Liquid</span>
+                        <a href="https://wa.me/918102814677?text=Hello%20Trivedy%20Ayurvedic,%20I%20want%20to%20enquire%20about%20Baidyanath%20Drakshasava." target="_blank" class="btn-wa-sm">Check Stock on WA</a>
+                    </div>
+                </div>
+
+                <div class="med-card reveal">
+                    <div>
+                        <span class="med-badge">Liver Care</span>
+                        <h4 class="med-name">Baidyanath Liverex Syrup & Tablets</h4>
+                        <p class="med-desc">Comprehensive hepatoprotective formula containing Kalmegh, Bhringraj, and Kutki. Protects the liver against toxins, relieves loss of appetite, and combats fatty liver.</p>
+                    </div>
+                    <div class="med-action">
+                        <span style="font-size: 0.85rem; font-weight: 600; color: var(--primary-green);">200ml / 60 Tabs</span>
+                        <a href="https://wa.me/918102814677?text=Hello%20Trivedy%20Ayurvedic,%20I%20want%20to%20enquire%20about%20Baidyanath%20Liverex." target="_blank" class="btn-wa-sm">Check Stock on WA</a>
+                    </div>
+                </div>
+
+                <div class="med-card reveal">
+                    <div>
+                        <span class="med-badge">Hair Care</span>
+                        <h4 class="med-name">Baidyanath Mahabhringraj Tel</h4>
+                        <p class="med-desc">Prepared via authentic Taila Pak Vidhi with 26 medicinal herbs. Strengthens hair roots, arrests premature graying and hair loss, and relieves tension headaches.</p>
+                    </div>
+                    <div class="med-action">
+                        <span style="font-size: 0.85rem; font-weight: 600; color: var(--primary-green);">100ml / 200ml</span>
+                        <a href="https://wa.me/918102814677?text=Hello%20Trivedy%20Ayurvedic,%20I%20want%20to%20enquire%20about%20Mahabhringraj%20Tel." target="_blank" class="btn-wa-sm">Check Stock on WA</a>
+                    </div>
+                </div>
+
+                <div class="med-card reveal">
+                    <div>
+                        <span class="med-badge">Gut Health</span>
+                        <h4 class="med-name">Baidyanath Triphala Churna</h4>
+                        <p class="med-desc">Pure micro-pulverized equal blend of Haritaki, Bibhitaki, and Amalaki. Natural colon cleanser, relieves chronic constipation, improves digestion and eye health.</p>
+                    </div>
+                    <div class="med-action">
+                        <span style="font-size: 0.85rem; font-weight: 600; color: var(--primary-green);">100g / 250g / 500g</span>
+                        <a href="https://wa.me/918102814677?text=Hello%20Trivedy%20Ayurvedic,%20I%20want%20to%20enquire%20about%20Triphala%20Churna." target="_blank" class="btn-wa-sm">Check Stock on WA</a>
+                    </div>
+                </div>
+
+                <div class="med-card reveal">
+                    <div>
+                        <span class="med-badge">Cough & Throat</span>
+                        <h4 class="med-name">Baidyanath Kasamrit Herbal</h4>
+                        <p class="med-desc">Non-drowsy herbal cough syrup formulated with Vasaka, Tulsi, and Mulethi. Effective for dry cough, allergic bronchitis, smoker's cough, and seasonal throat congestion.</p>
+                    </div>
+                    <div class="med-action">
+                        <span style="font-size: 0.85rem; font-weight: 600; color: var(--primary-green);">100ml / 200ml</span>
+                        <a href="https://wa.me/918102814677?text=Hello%20Trivedy%20Ayurvedic,%20I%20want%20to%20enquire%20about%20Kasamrit%20Herbal." target="_blank" class="btn-wa-sm">Check Stock on WA</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dabur Showcase -->
+            <div class="brand-section-heading reveal">
+                <div class="brand-logo-badge" style="color: #b86200;">
+                    <span>🍯</span> Dabur India
+                </div>
+                <div class="brand-tagline">135+ Years of Dedicated Ayurvedic Healthcare</div>
+            </div>
+
+            <div class="medicines-grid">
+                <div class="med-card reveal">
+                    <div>
+                        <span class="med-badge dabur">100% Pure & Tested</span>
+                        <h4 class="med-name">Dabur 100% Pure Honey</h4>
+                        <p class="med-desc">Nuclear Magnetic Resonance (NMR) tested 100% pure honey. Free from adulteration and added sugar. Aids daily immunity, throat soothing, and natural metabolic health.</p>
+                    </div>
+                    <div class="med-action">
+                        <span style="font-size: 0.85rem; font-weight: 600; color: #b86200;">250g / 500g / 1kg</span>
+                        <a href="https://wa.me/918102814677?text=Hello%20Trivedy%20Ayurvedic,%20I%20want%20to%20enquire%20about%20Dabur%20Pure%20Honey." target="_blank" class="btn-wa-sm">Check Stock on WA</a>
+                    </div>
+                </div>
+
+                <div class="med-card reveal">
+                    <div>
+                        <span class="med-badge dabur">2X Immunity</span>
+                        <h4 class="med-name">Dabur Chyawanprash</h4>
+                        <p class="med-desc">Clinically proven 2X illness protection formula with 40+ Ayurvedic herbs including Amla, Guduchi, and Pippali. Fights recurrent seasonal flu, infections, and fatigue.</p>
+                    </div>
+                    <div class="med-action">
+                        <span style="font-size: 0.85rem; font-weight: 600; color: #b86200;">500g / 1kg / 2kg</span>
+                        <a href="https://wa.me/918102814677?text=Hello%20Trivedy%20Ayurvedic,%20I%20want%20to%20enquire%20about%20Dabur%20Chyawanprash." target="_blank" class="btn-wa-sm">Check Stock on WA</a>
+                    </div>
+                </div>
+
+                <div class="med-card reveal">
+                    <div>
+                        <span class="med-badge dabur">Fast Gas & Acidity Relief</span>
+                        <h4 class="med-name">Dabur Pudin Hara (Pearls & Liquid)</h4>
+                        <p class="med-desc">Instant cooling relief from gas, bloating, and stomach ache. Formulated with concentrated Pudina Satva for fast-acting digestive comfort after meals.</p>
+                    </div>
+                    <div class="med-action">
+                        <span style="font-size: 0.85rem; font-weight: 600; color: #b86200;">Pearls / 30ml Drops</span>
+                        <a href="https://wa.me/918102814677?text=Hello%20Trivedy%20Ayurvedic,%20I%20want%20to%20enquire%20about%20Dabur%20Pudin%20Hara." target="_blank" class="btn-wa-sm">Check Stock on WA</a>
+                    </div>
+                </div>
+
+                <div class="med-card reveal">
+                    <div>
+                        <span class="med-badge dabur">Herbal Cough Relief</span>
+                        <h4 class="med-name">Dabur Honitus Herbal Syrup</h4>
+                        <p class="med-desc">Ayurvedic non-drowsy cough syrup fortified with Tulsi, Mulethi, Banapsha, and pure Honey. Instantly soothes irritated throat and relieves bronchial congestion.</p>
+                    </div>
+                    <div class="med-action">
+                        <span style="font-size: 0.85rem; font-weight: 600; color: #b86200;">100ml / 200ml</span>
+                        <a href="https://wa.me/918102814677?text=Hello%20Trivedy%20Ayurvedic,%20I%20want%20to%20enquire%20about%20Dabur%20Honitus." target="_blank" class="btn-wa-sm">Check Stock on WA</a>
+                    </div>
+                </div>
+
+                <div class="med-card reveal">
+                    <div>
+                        <span class="med-badge dabur">Women's Health</span>
+                        <h4 class="med-name">Dabur Dashmularishta</h4>
+                        <p class="med-desc">Traditional nutritional restorative tonic for women. Promotes post-pregnancy strength recovery, regulates energy levels, and relieves fatigue and weakness.</p>
+                    </div>
+                    <div class="med-action">
+                        <span style="font-size: 0.85rem; font-weight: 600; color: #b86200;">450ml Liquid</span>
+                        <a href="https://wa.me/918102814677?text=Hello%20Trivedy%20Ayurvedic,%20I%20want%20to%20enquire%20about%20Dabur%20Dashmularishta." target="_blank" class="btn-wa-sm">Check Stock on WA</a>
+                    </div>
+                </div>
+
+                <div class="med-card reveal">
+                    <div>
+                        <span class="med-badge dabur">Strength & Vigor</span>
+                        <h4 class="med-name">Dabur Shilajit Gold</h4>
+                        <p class="med-desc">Premium formulation of pure Shudh Shilajit, Swarna Bhasma, Kesar, and Ashwagandha. Clinically tested to boost physical stamina, endurance, and overall vigor.</p>
+                    </div>
+                    <div class="med-action">
+                        <span style="font-size: 0.85rem; font-weight: 600; color: #b86200;">10 / 20 / 30 Caps</span>
+                        <a href="https://wa.me/918102814677?text=Hello%20Trivedy%20Ayurvedic,%20I%20want%20to%20enquire%20about%20Dabur%20Shilajit%20Gold." target="_blank" class="btn-wa-sm">Check Stock on WA</a>
+                    </div>
+                </div>
+
+                <div class="med-card reveal">
+                    <div>
+                        <span class="med-badge dabur">Baby Care</span>
+                        <h4 class="med-name">Dabur Lal Tail & Janma Ghunti</h4>
+                        <p class="med-desc">Dabur Lal Tail strengthens baby's bones and muscles 2X faster (clinically tested). Dabur Janma Ghunti acts as an effective colic and digestive remedy for healthy infants.</p>
+                    </div>
+                    <div class="med-action">
+                        <span style="font-size: 0.85rem; font-weight: 600; color: #b86200;">100ml / 200ml / 500ml</span>
+                        <a href="https://wa.me/918102814677?text=Hello%20Trivedy%20Ayurvedic,%20I%20want%20to%20enquire%20about%20Dabur%20Baby%20Products." target="_blank" class="btn-wa-sm">Check Stock on WA</a>
+                    </div>
+                </div>
+
+                <div class="med-card reveal">
+                    <div>
+                        <span class="med-badge dabur">Dental Care</span>
+                        <h4 class="med-name">Dabur Red Ayurvedic Toothpaste</h4>
+                        <p class="med-desc">Packed with 13 potent Ayurvedic herbs like Clove oil, Pudina, and Tomar beej. Fights 7 dental problems including toothache, bad breath, bleeding gums, and cavities.</p>
+                    </div>
+                    <div class="med-action">
+                        <span style="font-size: 0.85rem; font-weight: 600; color: #b86200;">100g / 200g / 300g</span>
+                        <a href="https://wa.me/918102814677?text=Hello%20Trivedy%20Ayurvedic,%20I%20want%20to%20enquire%20about%20Dabur%20Red%20Paste." target="_blank" class="btn-wa-sm">Check Stock on WA</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Classical Medicines Callout -->
+            <div class="reveal" style="margin-top: 3.5rem; background: linear-gradient(135deg, #fff, #f5f0e1); padding: 2rem 2.5rem; border-radius: 12px; border-left: 5px solid var(--gold); box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+                <div>
+                    <h3 style="color: var(--primary-green); font-size: 1.4rem; margin-bottom: 0.3rem;">📜 Need a Classical Ayurvedic Bhasma, Asava, or Prescription Medicine?</h3>
+                    <p style="color: #666; font-size: 0.95rem; margin: 0;">We carry Patanjali, Himalaya, Zandu, Charak, Hamdard, and hard-to-find classical formulations. If not immediately on shelf, we source it within 24 hours.</p>
+                </div>
+                <a href="https://wa.me/918102814677?text=Hello%20Trivedy%20Ayurvedic,%20I%20have%20a%20doctor's%20prescription%20or%20medicine%20enquiry." target="_blank" class="btn" style="padding: 0.8rem 1.8rem; font-size: 0.85rem; white-space: nowrap;">WhatsApp Your Prescription</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="features">
+        <div class="container">
+            <h2 class="section-title reveal">Why Choose Us</h2>
+            <div class="section-divider reveal" style="color: var(--cream);">✨</div>
+            
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon">💯</div>
+                    <div>
+                        <h3 class="feature-title">Authentic Products</h3>
+                        <p>We source only genuine and 100% authentic medicines directly from trusted manufacturers.</p>
+                    </div>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🎓</div>
+                    <div>
+                        <h3 class="feature-title">Experienced Staff</h3>
+                        <p>Our knowledgeable team provides expert advice on traditional Ayurvedic remedies.</p>
+                    </div>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📦</div>
+                    <div>
+                        <h3 class="feature-title">Wide Range</h3>
+                        <p>A comprehensive inventory of herbal medicines and health products under one roof.</p>
+                    </div>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🤝</div>
+                    <div>
+                        <h3 class="feature-title">Community Trust</h3>
+                        <p>Years of dedicated service making us the most trusted pharmacy in Raj Dhanwar.</p>
+                    </div>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">💰</div>
+                    <div>
+                        <h3 class="feature-title">Affordable Pricing</h3>
+                        <p>Quality healthcare should be accessible. We offer genuine products at fair prices.</p>
+                    </div>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">❤️</div>
+                    <div>
+                        <h3 class="feature-title">Personalized Care</h3>
+                        <p>We listen to your health concerns and suggest customized holistic solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Brands -->
+    <section id="brands">
+        <div class="container">
+            <h2 class="section-title reveal">Trusted Brands We Carry</h2>
+            <div class="section-divider reveal">🏵️</div>
+            <p class="reveal" style="text-align: center; max-width: 600px; margin: 0 auto;">We partner with the most respected names in Ayurveda to ensure you get the highest quality products.</p>
+            
+            <div class="brands-container reveal">
+                <div class="brand-item">Dabur</div>
+                <div class="brand-item">Baidyanath</div>
+                <div class="brand-item">Patanjali</div>
+                <div class="brand-item">Himalaya</div>
+                <div class="brand-item">Zandu</div>
+                <div class="brand-item">Hamdard</div>
+                <div class="brand-item">Charak</div>
+                <div class="brand-item">Sri Sri Tattva</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Reviews & Patient Feedback -->
+    <section id="reviews" style="background-color: #faf7f0;">
+        <div class="container">
+            <div class="reveal" style="text-align: center; margin-bottom: 1rem;">
+                <span style="display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 1px solid var(--gold); padding: 6px 20px; border-radius: 30px; font-weight: 700; color: #b86200; font-size: 0.95rem; box-shadow: 0 4px 10px rgba(0,0,0,0.04);">
+                    <span>⭐⭐⭐⭐⭐</span> 5.0 / 5.0 Rating &bull; 21 Verified Ratings on Google Maps & Justdial
+                </span>
+            </div>
+            <h2 class="section-title reveal">Google Maps & Patient Reviews</h2>
+            <div class="section-divider reveal">💬</div>
+            <p class="reveal" style="text-align: center; max-width: 650px; margin: -1.5rem auto 3rem; color: #555; font-size: 1rem;">
+                Real reviews and experiences from patients across Raj Dhanwar and Giridih who trust our diagnosis and genuine Ayurvedic medicines.
+            </p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="quote-icon">"</div>
+                    <div style="color: var(--gold); font-size: 1.1rem; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Very accurate pulse diagnosis (Nadi Parikshan) by doctor. He identified my chronic digestive problem immediately. The medicines are 100% genuine Baidyanath and Dabur. Best clinic in Dhanwar."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div>
+                            <div class="author-name">Manoj Verma</div>
+                            <small>Raj Dhanwar &bull; <span style="color: var(--light-green); font-weight: 600;">Verified Google Review</span></small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="quote-icon">"</div>
+                    <div style="color: var(--gold); font-size: 1.1rem; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"I visited with severe knee joint pain and swelling. The Vaidya examined me carefully and recommended authentic classical herbal oils and Bhasmas. Within 3 weeks my pain reduced tremendously. Genuine care and fair prices."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div>
+                            <div class="author-name">Sunita Devi</div>
+                            <small>Giridih &bull; <span style="color: var(--light-green); font-weight: 600;">Verified Patient</span></small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="quote-icon">"</div>
+                    <div style="color: var(--gold); font-size: 1.1rem; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Trivedy Ayurvedic has been serving for years on Hatia Road. You get authentic Ayurvedic medicines that are hard to find in regular shops. Clean clinic and honest advice from the doctor."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">R</div>
+                        <div>
+                            <div class="author-name">Rameshwar Prasad</div>
+                            <small>Local Resident &bull; <span style="color: var(--light-green); font-weight: 600;">5.0 Star Rating</span></small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="quote-icon">"</div>
+                    <div style="color: var(--gold); font-size: 1.1rem; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"The doctor gives full attention to patients and explains dosage and diet precautions clearly. Genuine medicines at MRP or discounted rates. Highly recommended in Raj Dhanwar."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div>
+                            <div class="author-name">Amit Sharma</div>
+                            <small>Hatia Road &bull; <span style="color: var(--light-green); font-weight: 600;">Verified Customer</span></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal" style="text-align: center; margin-top: 2.5rem;">
+                <a href="https://www.google.com/maps/search/?api=1&query=Trivedy+Ayurvedic+Ayushdhalay+Hatia+Road+Rajdhanwar" target="_blank" class="btn" style="background: #fff; border-color: var(--gold); color: #333; font-size: 0.9rem; padding: 0.8rem 2rem;">
+                    <span>⭐</span> View All 21 Ratings on Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Location & Google Maps Gallery -->
+    <section id="location" style="background-color: #fff;">
+        <div class="container">
+            <h2 class="section-title reveal">Shop Location & Premises Photos</h2>
+            <div class="section-divider reveal">📍</div>
+            <p class="reveal" style="text-align: center; max-width: 700px; margin: -1.5rem auto 3rem; color: #555; font-size: 1.05rem;">
+                Visit us at our physical store & clinic in the heart of Raj Dhanwar. Easily reachable by vehicle, walk-in, or public transport.
+            </p>
+
+            <!-- Google Maps Callout Banner -->
+            <div class="gmaps-highlight-card reveal">
+                <div class="gmaps-highlight-info">
+                    <span style="background: rgba(212, 160, 23, 0.25); color: var(--gold); padding: 4px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Google Maps Verified &bull; 5.0 ★</span>
+                    <h3 style="margin-top: 0.6rem;">त्रिवेदी आयुर्वेदिक औषधालय (Trivedy Ayurvedic)</h3>
+                    <p style="color: #e0e0e0; font-size: 0.95rem; margin-bottom: 0.5rem;">
+                        📍 Hatia Road, Near Maheswari Palace, Raj Dhanwar, Giridih - 825412, Jharkhand
+                    </p>
+                    <p style="color: var(--gold); font-size: 0.9rem; font-weight: 500;">
+                        ⭐ 5.0 / 5.0 Rating (21 Google Reviews) &bull; वैद्य श्री मिथिलेश त्रिवेदी (तिवारी जी)
+                    </p>
+                    <p style="color: #ffcccc; font-size: 0.85rem; margin-top: 0.3rem;">
+                        ⚠️ In-Store Purchase & Clinic Visit Only &bull; We Do Not Provide Home Delivery
+                    </p>
+                </div>
+                <div class="gmaps-actions">
+                    <a href="https://maps.app.goo.gl/AyJcrpDkBMDBPm638" target="_blank" class="btn-gmaps">
+                        <span>🗺️</span> Open on Google Maps
+                    </a>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=24.4108865,85.982965" target="_blank" class="btn-gmaps-outline">
+                        <span>🧭</span> Get Directions
+                    </a>
+                </div>
+            </div>
+
+            <!-- Shop Location Photo Gallery -->
+            <h3 class="reveal" style="text-align: center; font-size: 1.8rem; color: var(--primary-green); margin-bottom: 2rem;">Real Photos from Google Maps</h3>
+            <div class="location-photos-grid">
+                <!-- Photo 1: Real Storefront from Google Maps -->
+                <div class="loc-photo-card reveal">
+                    <div class="loc-photo-img-wrap" style="height: 240px;">
+                        <img src="images/gmaps_2.jpg" alt="त्रिवेदी आयुर्वेदिक औषधालय Hatia Road Rajdhanwar Front View">
+                        <span class="loc-photo-tag">📍 Real Storefront & Board</span>
+                    </div>
+                    <div class="loc-photo-body">
+                        <h4>त्रिवेदी आयुर्वेदिक औषधालय (दुकान का मुख्य द्वार)</h4>
+                        <p>हटीया रोड, राजधनवार स्थित हमारी दुकान का मुख्य बोर्ड। वैद्य श्री मिथिलेश त्रिवेदी (तिवारी जी) - मो: 8102814677, 7992234393।</p>
+                        <a href="https://maps.app.goo.gl/Gc8mCkgymzpob4Lz6" target="_blank" style="font-size: 0.8rem; color: var(--primary-green); font-weight: 600; text-decoration: underline;">View on Google Maps &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Photo 2: Vaidya ji at Counter from Google Maps -->
+                <div class="loc-photo-card reveal">
+                    <div class="loc-photo-img-wrap" style="height: 240px;">
+                        <img src="images/gmaps_1.jpg" alt="Vaidya Mithilesh Trivedy at Consultation Desk">
+                        <span class="loc-photo-tag">🩺 Clinic & Patient Counter</span>
+                    </div>
+                    <div class="loc-photo-body">
+                        <h4>परामर्श एवं रोगी जांच काउंटर</h4>
+                        <p>दुकान के अंदर वैद्य जी द्वारा नाड़ी परीक्षण, रक्तचाप (BP) जांच एवं उचित आयुर्वेदिक परामर्श। सभी दवाइयां हमारी दुकान में उपलब्ध हैं।</p>
+                        <a href="https://maps.app.goo.gl/AyJcrpDkBMDBPm638" target="_blank" style="font-size: 0.8rem; color: var(--primary-green); font-weight: 600; text-decoration: underline;">View on Google Maps &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Photo 3: Shop Entrance from Google Maps -->
+                <div class="loc-photo-card reveal">
+                    <div class="loc-photo-img-wrap" style="height: 240px;">
+                        <img src="images/gmaps_3.jpg" alt="Trivedy Ayurvedic Shop Entrance Pillars">
+                        <span class="loc-photo-tag">🏪 Shop Entrance</span>
+                    </div>
+                    <div class="loc-photo-body">
+                        <h4>त्रिवेदी आयुर्वेद औषधालय प्रवेश</h4>
+                        <p>हटीया रोड पर स्थित दुकान के प्रवेश स्तंभ एवं आंतरिक रैक जहां बैद्यनाथ, डाबर, झंडू एवं पतंजलि की सभी दवाइयां व्यवस्थित हैं।</p>
+                        <a href="https://maps.app.goo.gl/iJbdrvxQPpk3XFkA6" target="_blank" style="font-size: 0.8rem; color: var(--primary-green); font-weight: 600; text-decoration: underline;">View on Google Maps &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Photo 4: Medicine Shelves -->
+                <div class="loc-photo-card reveal">
+                    <div class="loc-photo-img-wrap" style="height: 240px;">
+                        <img src="images/medicine_counter.jpg" alt="Ayurvedic Medicine Stock">
+                        <span class="loc-photo-tag">💊 100% In-Store Stock</span>
+                    </div>
+                    <div class="loc-photo-body">
+                        <h4>प्रामाणिक आयुर्वेदिक औषधियां</h4>
+                        <p>सभी क्लासिकल आसव, अरिष्ट, रस, भस्म एवं सिरप उपलब्ध। ध्यान दें: हम केवल दुकान से बिक्री करते हैं, होम डिलीवरी नहीं करते।</p>
+                        <span style="font-size: 0.8rem; color: #b86200; font-weight: 600;">In-Store Purchase Only</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Enquiry Section -->
+    <section id="contact" style="background-color: var(--cream);">
+        <div class="container">
+            <h2 class="section-title reveal">Contact & Enquiries</h2>
+            <div class="section-divider reveal">📞</div>
+            
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h4 class="info-title">Store Address</h4>
+                            <p><strong>Trivedy Ayurvedic Ayushdhalay</strong><br>
+                            Hatia Road, Near Maheswari Palace,<br>
+                            Raj Dhanwar, Giridih - 825412<br>
+                            Jharkhand, India</p>
+                            <p style="margin-top: 8px;">
+                                <a href="https://maps.app.goo.gl/AyJcrpDkBMDBPm638" target="_blank" style="color: var(--primary-green); font-weight: 600; text-decoration: underline;">📍 Open on Google Maps &rarr;</a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">🕐</div>
+                        <div>
+                            <h4 class="info-title">Store & Clinic Hours</h4>
+                            <p><strong>Monday - Saturday:</strong> 8:00 AM - 1:00 PM & 4:00 PM - 8:30 PM<br>
+                            <strong>Sunday:</strong> 9:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <h4 class="info-title">Direct Contact</h4>
+                            <p><a href="tel:+918102814677" style="color: inherit; font-weight: 600;">+91 81028 14677</a><br>
+                            <a href="tel:+917992234393" style="color: inherit; font-weight: 600;">+91 79922 34393</a><br>
+                            <a href="mailto:shaileshtrivedy@gmail.com" style="color: inherit;">shaileshtrivedy@gmail.com</a></p>
+                            <p style="margin-top: 6px;">
+                                <a href="https://wa.me/918102814677?text=Hello%20Trivedy%20Ayurvedic,%20I%20have%20an%20enquiry." target="_blank" style="color: #25D366; font-weight: 600;">💬 Chat with us on WhatsApp &rarr;</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form reveal">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--primary-green);">Patient Enquiry / Medicine Availability</h3>
+                    <form onsubmit="event.preventDefault(); alert('Thank you for reaching out to Trivedy Ayurvedic! We have received your message and will contact you shortly.');">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Mobile / WhatsApp Number" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="4" placeholder="Mention your health issue or medicine you want to check availability for..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Submit Enquiry</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="map-container reveal">
+                <!-- Exact Coordinates for Trivedy Ayurvedic Ayusdhalay on Hatia Road Rajdhanwar -->
+                <iframe src="https://maps.google.com/maps?q=24.4108865,85.982965&hl=en&z=17&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 class="footer-title">Trivedy Ayurvedic</h3>
+                    <p style="margin-bottom: 1rem;">प्रकृति की शक्ति, आयुर्वेद का विश्वास<br>Your trusted source for authentic Ayurvedic medicines and natural wellness products in Raj Dhanwar.</p>
+                </div>
+                <div>
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#brands">Brands</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title">Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#products">Classical Medicines</a></li>
+                        <li><a href="#products">Skin & Hair Care</a></li>
+                        <li><a href="#products">Immunity Boosters</a></li>
+                        <li><a href="#products">Digestive Health</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Trivedy Ayurvedic Ayushdhalay. All Rights Reserved. | Made with ❤️ by <strong>Sabhyam</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/918102814677?text=Hello%20Trivedy%20Ayurvedic,%20I%20have%20an%20enquiry." target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.005-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const navLinksItems = document.querySelectorAll('.nav-link');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+
+        navLinksItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.textContent = '☰';
+            });
+        });
+
+        // Sticky Navbar
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            
+            // Scroll Reveal Animation
+            reveal();
+        });
+
+        // Smooth Scrolling for Anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 70, // offset for fixed header
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll Reveal Function
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        
+        // Trigger reveal on load
+        window.addEventListener('load', reveal);
+    </script>
+</body>
+</html>
