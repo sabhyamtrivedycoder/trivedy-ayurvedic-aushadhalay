@@ -185,36 +185,217 @@
 
         /* Hero Section */
         #home {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             position: relative;
-            background: linear-gradient(rgba(45, 80, 22, 0.8), rgba(92, 51, 23, 0.8)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80') center/cover no-repeat;
-            padding: 0;
+            background: linear-gradient(rgba(18, 40, 10, 0.90), rgba(30, 20, 10, 0.90)), url('images/gmaps_photo_2.jpg') center/cover no-repeat;
+            padding: 110px 0 60px;
             margin-top: 0;
         }
 
         .hero-content {
-            text-align: center;
             color: var(--text-light);
             z-index: 1;
             width: 100%;
-            padding: 0 2rem;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .hero-text-col {
+            text-align: left;
         }
 
         .hero-title {
-            font-size: 4rem;
+            font-size: 3.4rem;
             color: var(--gold);
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 0.5rem;
+            line-height: 1.15;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
+
+        .hero-hindi-title {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 1.2rem;
+            font-weight: 600;
         }
 
         .hero-subtitle {
-            font-size: 2rem;
-            font-family: var(--font-heading);
-            margin-bottom: 2rem;
-            font-style: italic;
-            color: var(--cream);
+            font-size: 1.15rem;
+            line-height: 1.6;
+            margin-bottom: 1.8rem;
+            color: #f0ede6;
+        }
+
+        /* Hero Front Photo Showcase */
+        .hero-photo-showcase {
+            background: #fff;
+            padding: 14px;
+            border-radius: 16px;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.45);
+            border: 2px solid rgba(212, 160, 23, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-photo-showcase:hover {
+            transform: translateY(-4px);
+        }
+
+        .hero-main-photo-wrap {
+            height: 310px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .hero-main-photo-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .hero-main-photo-wrap:hover img {
+            transform: scale(1.06);
+        }
+
+        .hero-photo-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(45, 80, 22, 0.9);
+            color: #fff;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .hero-photo-info {
+            padding: 10px 4px 6px;
+            color: #333;
+        }
+
+        .hero-photo-info h4 {
+            color: var(--primary-green);
+            font-size: 1.15rem;
+            margin-bottom: 2px;
+        }
+
+        .hero-photo-info p {
+            font-size: 0.85rem;
+            color: #666;
+            margin: 0;
+        }
+
+        .hero-thumbs-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .hero-thumb-item {
+            height: 85px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            border: 1px solid rgba(0,0,0,0.12);
+        }
+
+        .hero-thumb-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .hero-thumb-item:hover img {
+            transform: scale(1.12);
+        }
+
+        .hero-thumb-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            font-size: 0.65rem;
+            padding: 2px 4px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* Front Glimpse Bar below Hero */
+        .front-glimpse-bar {
+            background: #fff;
+            padding: 2.5rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .front-glimpse-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .front-glimpse-card {
+            background: #faf7f0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(45, 80, 22, 0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .front-glimpse-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .front-glimpse-img {
+            height: 160px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .front-glimpse-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .front-glimpse-card:hover .front-glimpse-img img {
+            transform: scale(1.08);
+        }
+
+        .front-glimpse-content {
+            padding: 0.9rem 1rem;
+        }
+
+        .front-glimpse-content h5 {
+            color: var(--primary-green);
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+
+        .front-glimpse-content p {
+            color: #777;
+            font-size: 0.78rem;
+            margin: 0;
         }
 
         .btn {
@@ -943,8 +1124,18 @@
 
         /* Responsive Design */
         @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .hero-text-col {
+                text-align: center;
+            }
             .hero-title {
-                font-size: 3rem;
+                font-size: 2.8rem;
+            }
+            .hero-main-photo-wrap {
+                height: 280px;
             }
             .about-grid, .contact-grid {
                 grid-template-columns: 1fr;
@@ -952,6 +1143,21 @@
         }
 
         @media (max-width: 768px) {
+            #home {
+                padding: 90px 0 40px;
+            }
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            .hero-hindi-title {
+                font-size: 1.4rem;
+            }
+            .hero-main-photo-wrap {
+                height: 240px;
+            }
+            .hero-thumb-item {
+                height: 70px;
+            }
             .hamburger {
                 display: block;
             }
@@ -1019,18 +1225,115 @@
 
     <!-- Hero Section -->
     <section id="home">
-        <div class="hero-content">
-            <div class="reveal" style="display: inline-block; background: rgba(0,0,0,0.55); border: 1px solid var(--gold); padding: 6px 20px; border-radius: 30px; font-size: 0.95rem; color: var(--gold); margin-bottom: 1.2rem; backdrop-filter: blur(5px);">
-                🏥 In-Clinic Patient Checkup (नाड़ी परीक्षण) & Ayurvedic Pharmacy | Hatia Road, Raj Dhanwar
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-grid">
+                    <!-- Left Column: Business Info & Actions -->
+                    <div class="hero-text-col reveal">
+                        <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0,0,0,0.6); border: 1px solid var(--gold); padding: 6px 18px; border-radius: 30px; font-size: 0.9rem; color: var(--gold); margin-bottom: 1.2rem; backdrop-filter: blur(6px);">
+                            <span>⭐ 5.0 / 5.0</span> Google Maps Verified &bull; 20+ Patient Reviews
+                        </div>
+                        <h1 class="hero-title">Trivedy Ayurvedic Ayushdhalay</h1>
+                        <div class="hero-hindi-title">त्रिवेदी आयुर्वेदिक औषधालय (राजधनवार)</div>
+                        <p class="hero-subtitle">
+                            <strong>वैद्य श्री मिथिलेश त्रिवेदी (तिवारी जी) / गुंजन त्रिवेदी</strong> के मार्गदर्शन में प्रामाणिक नाड़ी परीक्षण, स्वास्थ्य परामर्श एवं शुद्ध शास्त्रीय आयुर्वेदिक औषधियां।
+                        </p>
+                        
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                            <a href="#clinic" class="btn">🩺 Patient Checkup</a>
+                            <a href="https://maps.app.goo.gl/AyJcrpDkBMDBPm638" target="_blank" class="btn" style="background: transparent; border-color: var(--gold); color: var(--gold);">
+                                <span>🗺️</span> View on Google Maps
+                            </a>
+                        </div>
+                        
+                        <div style="display: inline-block; background: rgba(128, 0, 32, 0.9); color: #fff; padding: 6px 18px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; border: 1px solid rgba(255,255,255,0.3);">
+                            ⚠️ केवल इन-स्टोर बिक्री एवं क्लिनिक जांच &bull; हम होम डिलीवरी नहीं करते
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Real Google Maps Front Photo Showcase -->
+                    <div class="hero-photo-col reveal">
+                        <div class="hero-photo-showcase">
+                            <div class="hero-main-photo-wrap" onclick="openGmapsModal('images/gmaps_photo_2.jpg', 'त्रिवेदी आयुर्वेदिक औषधालय - मुख्य दुकान एवं बोर्ड (हटीया रोड, राजधनवार)')">
+                                <img src="images/gmaps_photo_2.jpg" alt="त्रिवेदी आयुर्वेदिक औषधालय Hatia Road Rajdhanwar Front View">
+                                <div class="hero-photo-badge">📍 Real Storefront & Signboard</div>
+                            </div>
+                            <div class="hero-photo-info">
+                                <h4>त्रिवेदी आयुर्वेदिक औषधालय</h4>
+                                <p>हटीया रोड, नियर माहेश्वरी पैलेस, राजधनवार | मो: 8102814677, 7992234393</p>
+                            </div>
+                            <div class="hero-thumbs-row">
+                                <div class="hero-thumb-item" onclick="openGmapsModal('images/gmaps_photo_1.jpg', 'वैद्य जी का परामर्श काउंटर, नाड़ी परीक्षण एवं रक्तचाप जांच')">
+                                    <img src="images/gmaps_photo_1.jpg" alt="Vaidya Mithilesh Trivedy at Consultation Desk">
+                                    <span class="hero-thumb-label">🩺 Doctor</span>
+                                </div>
+                                <div class="hero-thumb-item" onclick="openGmapsModal('images/gmaps_photo_10.jpg', 'दुकान का मुख्य प्रवेश द्वार')">
+                                    <img src="images/gmaps_photo_10.jpg" alt="Shop Entrance Pillars">
+                                    <span class="hero-thumb-label">🏪 Entrance</span>
+                                </div>
+                                <div class="hero-thumb-item" onclick="openGmapsModal('images/gmaps_photo_5.jpg', 'दुकान के अंदर औषधियों के रैक')">
+                                    <img src="images/gmaps_photo_5.jpg" alt="Medicine Shelves Stock">
+                                    <span class="hero-thumb-label">💊 Medicines</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h1 class="hero-title reveal">Trivedy Ayurvedic Ayushdhalay</h1>
-            <p class="hero-subtitle reveal">प्रकृति की शक्ति, आयुर्वेद का विश्वास</p>
-            <div class="reveal" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
-                <a href="#clinic" class="btn">🩺 Patient Checkup & Clinic</a>
-                <a href="#medicines" class="btn" style="background: transparent; border-color: var(--gold); color: var(--gold);">💊 Our Medicines</a>
+        </div>
+    </section>
+
+    <!-- Front Photo Highlights Bar -->
+    <section class="front-glimpse-bar">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 1.5rem;">
+                <span style="color: var(--primary-green); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Google Maps Photos & Premise Glimpse</span>
+                <h3 style="color: var(--primary-green); font-size: 1.5rem; margin-top: 4px;">Real Views of Our Shop & Clinic in Raj Dhanwar</h3>
             </div>
-            <div class="reveal" style="display: inline-block; background: rgba(128, 0, 32, 0.85); color: #fff; padding: 6px 18px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; border: 1px solid rgba(255,255,255,0.3);">
-                ⚠️ Notice: In-Store Purchase & Clinic Visit Only. We do NOT provide home delivery.
+            <div class="front-glimpse-grid">
+                <!-- Card 1 -->
+                <div class="front-glimpse-card reveal" onclick="openGmapsModal('images/gmaps_photo_2.jpg', 'दुकान का मुख्य बोर्ड - वैद्य श्री मिथिलेश त्रिवेदी (तिवारी जी)')">
+                    <div class="front-glimpse-img">
+                        <img src="images/gmaps_photo_2.jpg" alt="Store Front Board">
+                    </div>
+                    <div class="front-glimpse-content">
+                        <h5>📍 मुख्य दुकान एवं बोर्ड</h5>
+                        <p>हटीया रोड, राजधनवार</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="front-glimpse-card reveal" onclick="openGmapsModal('images/gmaps_photo_1.jpg', 'परामर्श काउंटर एवं नाड़ी परीक्षण डेस्क')">
+                    <div class="front-glimpse-img">
+                        <img src="images/gmaps_photo_1.jpg" alt="Doctor Consultation Counter">
+                    </div>
+                    <div class="front-glimpse-content">
+                        <h5>🩺 नाड़ी परीक्षण एवं जांच</h5>
+                        <p>वैद्य जी का परामर्श काउंटर</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="front-glimpse-card reveal" onclick="openGmapsModal('images/gmaps_photo_10.jpg', 'दुकान प्रवेश द्वार')">
+                    <div class="front-glimpse-img">
+                        <img src="images/gmaps_photo_10.jpg" alt="Shop Entrance">
+                    </div>
+                    <div class="front-glimpse-content">
+                        <h5>🏪 मुख्य प्रवेश द्वार</h5>
+                        <p>हटीया रोड मुख्य मार्ग</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="front-glimpse-card reveal" onclick="openGmapsModal('images/gmaps_photo_5.jpg', 'प्रामाणिक आयुर्वेदिक दवाइयां')">
+                    <div class="front-glimpse-img">
+                        <img src="images/gmaps_photo_5.jpg" alt="Authentic Ayurvedic Medicines">
+                    </div>
+                    <div class="front-glimpse-content">
+                        <h5>💊 शुद्ध दवाइयों का संग्रह</h5>
+                        <p>बैद्यनाथ, डाबर, पतंजलि</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1042,12 +1345,13 @@
             <div class="section-divider reveal">🍃</div>
             
             <div class="about-grid">
-                <div class="about-image reveal">
-                    <img src="images/shop_front.jpg" alt="Trivedy Ayurvedic Ayushdhalay Hatia Road Rajdhanwar">
+                <div class="about-image reveal" style="border-radius: 12px; overflow: hidden; box-shadow: 0 15px 35px rgba(45,80,22,0.18); cursor: pointer;" onclick="openGmapsModal('images/gmaps_photo_2.jpg', 'त्रिवेदी आयुर्वेदिक औषधालय - हटीया रोड, राजधनवार')">
+                    <img src="images/gmaps_photo_2.jpg" alt="Trivedy Ayurvedic Ayushdhalay Hatia Road Rajdhanwar Front View">
+                    <span style="position: absolute; top: 12px; left: 12px; background: rgba(45, 80, 22, 0.9); color: #fff; padding: 5px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">📍 Real Storefront on Hatia Road</span>
                 </div>
                 <div class="about-text reveal">
                     <h3 style="color: var(--gold); font-size: 1.8rem;">A Legacy of Healing & Wellness in Raj Dhanwar</h3>
-                    <p>Welcome to <strong>Trivedy Ayurvedic Ayushdhalay</strong>, your premier center for authentic Ayurvedic healing, patient checkups, and genuine herbal medicines. Located on Hatia Road, near Maheswari Palace, we have been serving the Raj Dhanwar community with dedicated healthcare.</p>
+                    <p>Welcome to <strong>Trivedy Ayurvedic Ayushdhalay</strong> (त्रिवेदी आयुर्वेदिक औषधालय), your trusted center for authentic Ayurvedic healing, patient checkups, and genuine herbal medicines. Located on Hatia Road, near Maheswari Palace, we have been serving the Raj Dhanwar community with dedicated healthcare.</p>
                     <p>Unlike commercial stores, our medicines are our own verified pharmacy stock — carefully chosen classical formulations from Shree Baidyanath, Dabur, and respected Ayurvedic pharmacies. Every medicine is 100% genuine and stored under optimal herbal conditions.</p>
                     <p>We do <strong>NOT</strong> provide home delivery. All medicines and clinical consultations are provided exclusively in-person at our shop and clinic, ensuring you receive the correct diagnosis and authentic remedy.</p>
                 </div>
@@ -1066,8 +1370,9 @@
             </p>
 
             <div class="about-grid" style="align-items: flex-start;">
-                <div class="about-image reveal" style="border-radius: 12px; overflow: hidden; box-shadow: 0 15px 35px rgba(45,80,22,0.15);">
-                    <img src="images/patient_checkup.jpg" alt="Ayurvedic Doctor Checking Patient Pulse - Nadi Parikshan" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                <div class="about-image reveal" style="border-radius: 12px; overflow: hidden; box-shadow: 0 15px 35px rgba(45,80,22,0.18); cursor: pointer; height: 380px; position: relative;" onclick="openGmapsModal('images/gmaps_photo_1.jpg', 'वैद्य श्री मिथिलेश त्रिवेदी (तिवारी जी) परामर्श एवं नाड़ी परीक्षण काउंटर')">
+                    <img src="images/gmaps_photo_1.jpg" alt="Vaidya Mithilesh Trivedy at Consultation Desk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                    <span style="position: absolute; top: 12px; left: 12px; background: rgba(45, 80, 22, 0.9); color: #fff; padding: 5px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; z-index: 2;">🩺 Real Clinic & Pulse Diagnosis Desk</span>
                 </div>
                 <div class="about-text reveal">
                     <div style="display: inline-block; background: #eef5e8; color: var(--primary-green); font-size: 0.8rem; font-weight: 700; padding: 4px 14px; border-radius: 20px; margin-bottom: 0.8rem; text-transform: uppercase;">In-Clinic Consultations</div>
