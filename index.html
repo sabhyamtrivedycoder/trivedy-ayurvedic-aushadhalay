@@ -248,7 +248,7 @@
         }
 
         .hero-main-photo-wrap {
-            height: 310px;
+            height: 380px;
             border-radius: 12px;
             overflow: hidden;
             position: relative;
@@ -259,6 +259,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: top center;
             transition: transform 0.5s ease;
         }
 
@@ -437,15 +438,15 @@
 
         .about-image {
             position: relative;
-            border-radius: 10px;
+            border-radius: 14px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+            height: 480px;
+            border: 2px solid rgba(212, 160, 23, 0.4);
         }
 
         .about-image::before {
-            content: '';
-            display: block;
-            padding-top: 75%;
+            display: none;
         }
 
         .about-image img {
@@ -455,6 +456,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: top center;
         }
         
         .decorative-border {
@@ -731,6 +733,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: top center;
             transition: transform 0.5s ease;
         }
 
@@ -1254,8 +1257,8 @@
                     <!-- Right Column: Real Google Maps Front Photo Showcase -->
                     <div class="hero-photo-col reveal">
                         <div class="hero-photo-showcase">
-                            <div class="hero-main-photo-wrap" onclick="openGmapsModal('images/gmaps_photo_2.jpg', 'त्रिवेदी आयुर्वेदिक औषधालय - मुख्य दुकान एवं बोर्ड (हटीया रोड, राजधनवार)')">
-                                <img src="images/gmaps_photo_2.jpg" alt="त्रिवेदी आयुर्वेदिक औषधालय Hatia Road Rajdhanwar Front View">
+                            <div class="hero-main-photo-wrap" onclick="openGmapsModal('images/real_shop_front.jpg?v=202611', 'त्रिवेदी आयुर्वेदिक औषधालय - मुख्य दुकान एवं बोर्ड (हटीया रोड, राजधनवार)')">
+                                <img src="images/real_shop_front.jpg?v=202611" alt="त्रिवेदी आयुर्वेदिक औषधालय Hatia Road Rajdhanwar Front View">
                                 <div class="hero-photo-badge">📍 Real Storefront & Signboard</div>
                             </div>
                             <div class="hero-photo-info">
@@ -1263,16 +1266,16 @@
                                 <p>हटीया रोड, नियर माहेश्वरी पैलेस, राजधनवार | मो: 8102814677, 7992234393</p>
                             </div>
                             <div class="hero-thumbs-row">
-                                <div class="hero-thumb-item" onclick="openGmapsModal('images/gmaps_photo_1.jpg', 'वैद्य जी का परामर्श काउंटर, नाड़ी परीक्षण एवं रक्तचाप जांच')">
-                                    <img src="images/gmaps_photo_1.jpg" alt="Vaidya Mithilesh Trivedy at Consultation Desk">
+                                <div class="hero-thumb-item" onclick="openGmapsModal('images/real_patient_checkup.jpg?v=202611', 'वैद्य जी का परामर्श काउंटर, नाड़ी परीक्षण एवं रक्तचाप जांच')">
+                                    <img src="images/real_patient_checkup.jpg?v=202611" alt="Vaidya Mithilesh Trivedy at Consultation Desk">
                                     <span class="hero-thumb-label">🩺 Doctor</span>
                                 </div>
-                                <div class="hero-thumb-item" onclick="openGmapsModal('images/gmaps_photo_10.jpg', 'दुकान का मुख्य प्रवेश द्वार')">
-                                    <img src="images/gmaps_photo_10.jpg" alt="Shop Entrance Pillars">
+                                <div class="hero-thumb-item" onclick="openGmapsModal('images/real_shop_entrance.jpg?v=202611', 'दुकान का मुख्य प्रवेश द्वार')">
+                                    <img src="images/real_shop_entrance.jpg?v=202611" alt="Shop Entrance Pillars">
                                     <span class="hero-thumb-label">🏪 Entrance</span>
                                 </div>
-                                <div class="hero-thumb-item" onclick="openGmapsModal('images/gmaps_photo_5.jpg', 'दुकान के अंदर औषधियों के रैक')">
-                                    <img src="images/gmaps_photo_5.jpg" alt="Medicine Shelves Stock">
+                                <div class="hero-thumb-item" onclick="openGmapsModal('images/gmaps_photo_5.jpg?v=202611', 'दुकान के अंदर औषधियों के रैक')">
+                                    <img src="images/gmaps_photo_5.jpg?v=202611" alt="Medicine Shelves Stock">
                                     <span class="hero-thumb-label">💊 Medicines</span>
                                 </div>
                             </div>
@@ -1292,9 +1295,9 @@
             </div>
             <div class="front-glimpse-grid">
                 <!-- Card 1 -->
-                <div class="front-glimpse-card reveal" onclick="openGmapsModal('images/gmaps_photo_2.jpg', 'दुकान का मुख्य बोर्ड - वैद्य श्री मिथिलेश त्रिवेदी (तिवारी जी)')">
+                <div class="front-glimpse-card reveal" onclick="openGmapsModal('images/real_shop_front.jpg?v=202611', 'दुकान का मुख्य बोर्ड - वैद्य श्री मिथिलेश त्रिवेदी (तिवारी जी)')">
                     <div class="front-glimpse-img">
-                        <img src="images/gmaps_photo_2.jpg" alt="Store Front Board">
+                        <img src="images/real_shop_front.jpg?v=202611" alt="Store Front Board">
                     </div>
                     <div class="front-glimpse-content">
                         <h5>📍 मुख्य दुकान एवं बोर्ड</h5>
@@ -1303,9 +1306,9 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="front-glimpse-card reveal" onclick="openGmapsModal('images/gmaps_photo_1.jpg', 'परामर्श काउंटर एवं नाड़ी परीक्षण डेस्क')">
+                <div class="front-glimpse-card reveal" onclick="openGmapsModal('images/real_patient_checkup.jpg?v=202611', 'परामर्श काउंटर एवं नाड़ी परीक्षण डेस्क')">
                     <div class="front-glimpse-img">
-                        <img src="images/gmaps_photo_1.jpg" alt="Doctor Consultation Counter">
+                        <img src="images/real_patient_checkup.jpg?v=202611" alt="Doctor Consultation Counter">
                     </div>
                     <div class="front-glimpse-content">
                         <h5>🩺 नाड़ी परीक्षण एवं जांच</h5>
@@ -1314,9 +1317,9 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="front-glimpse-card reveal" onclick="openGmapsModal('images/gmaps_photo_10.jpg', 'दुकान प्रवेश द्वार')">
+                <div class="front-glimpse-card reveal" onclick="openGmapsModal('images/real_shop_entrance.jpg?v=202611', 'दुकान प्रवेश द्वार')">
                     <div class="front-glimpse-img">
-                        <img src="images/gmaps_photo_10.jpg" alt="Shop Entrance">
+                        <img src="images/real_shop_entrance.jpg?v=202611" alt="Shop Entrance">
                     </div>
                     <div class="front-glimpse-content">
                         <h5>🏪 मुख्य प्रवेश द्वार</h5>
@@ -1325,9 +1328,9 @@
                 </div>
 
                 <!-- Card 4 -->
-                <div class="front-glimpse-card reveal" onclick="openGmapsModal('images/gmaps_photo_5.jpg', 'प्रामाणिक आयुर्वेदिक दवाइयां')">
+                <div class="front-glimpse-card reveal" onclick="openGmapsModal('images/gmaps_photo_5.jpg?v=202611', 'प्रामाणिक आयुर्वेदिक दवाइयां')">
                     <div class="front-glimpse-img">
-                        <img src="images/gmaps_photo_5.jpg" alt="Authentic Ayurvedic Medicines">
+                        <img src="images/gmaps_photo_5.jpg?v=202611" alt="Authentic Ayurvedic Medicines">
                     </div>
                     <div class="front-glimpse-content">
                         <h5>💊 शुद्ध दवाइयों का संग्रह</h5>
@@ -1345,9 +1348,9 @@
             <div class="section-divider reveal">🍃</div>
             
             <div class="about-grid">
-                <div class="about-image reveal" style="border-radius: 12px; overflow: hidden; box-shadow: 0 15px 35px rgba(45,80,22,0.18); cursor: pointer;" onclick="openGmapsModal('images/gmaps_photo_2.jpg', 'त्रिवेदी आयुर्वेदिक औषधालय - हटीया रोड, राजधनवार')">
-                    <img src="images/gmaps_photo_2.jpg" alt="Trivedy Ayurvedic Ayushdhalay Hatia Road Rajdhanwar Front View">
-                    <span style="position: absolute; top: 12px; left: 12px; background: rgba(45, 80, 22, 0.9); color: #fff; padding: 5px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">📍 Real Storefront on Hatia Road</span>
+                <div class="about-image reveal" style="cursor: pointer;" onclick="openGmapsModal('images/real_shop_front.jpg?v=202611', 'त्रिवेदी आयुर्वेदिक औषधालय - हटीया रोड, राजधनवार')">
+                    <img src="images/real_shop_front.jpg?v=202611" alt="Trivedy Ayurvedic Ayushdhalay Hatia Road Rajdhanwar Front View">
+                    <span style="position: absolute; top: 12px; left: 12px; background: rgba(45, 80, 22, 0.9); color: #fff; padding: 5px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; z-index: 2;">📍 Real Storefront on Hatia Road</span>
                 </div>
                 <div class="about-text reveal">
                     <h3 style="color: var(--gold); font-size: 1.8rem;">A Legacy of Healing & Wellness in Raj Dhanwar</h3>
@@ -1370,8 +1373,8 @@
             </p>
 
             <div class="about-grid" style="align-items: flex-start;">
-                <div class="about-image reveal" style="border-radius: 12px; overflow: hidden; box-shadow: 0 15px 35px rgba(45,80,22,0.18); cursor: pointer; height: 380px; position: relative;" onclick="openGmapsModal('images/gmaps_photo_1.jpg', 'वैद्य श्री मिथिलेश त्रिवेदी (तिवारी जी) परामर्श एवं नाड़ी परीक्षण काउंटर')">
-                    <img src="images/gmaps_photo_1.jpg" alt="Vaidya Mithilesh Trivedy at Consultation Desk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                <div class="about-image reveal" style="cursor: pointer;" onclick="openGmapsModal('images/real_patient_checkup.jpg?v=202611', 'वैद्य श्री मिथिलेश त्रिवेदी (तिवारी जी) परामर्श एवं नाड़ी परीक्षण काउंटर')">
+                    <img src="images/real_patient_checkup.jpg?v=202611" alt="Vaidya Mithilesh Trivedy at Consultation Desk">
                     <span style="position: absolute; top: 12px; left: 12px; background: rgba(45, 80, 22, 0.9); color: #fff; padding: 5px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; z-index: 2;">🩺 Real Clinic & Pulse Diagnosis Desk</span>
                 </div>
                 <div class="about-text reveal">
@@ -1925,8 +1928,8 @@
             <div class="location-photos-grid">
                 <!-- Photo 1: Storefront Board -->
                 <div class="loc-photo-card reveal">
-                    <div class="loc-photo-img-wrap" style="height: 240px;" onclick="openGmapsModal('images/gmaps_photo_2.jpg', 'त्रिवेदी आयुर्वेदिक औषधालय - मुख्य बोर्ड एवं दुकान का अगला भाग (वैद्य श्री मिथिलेश त्रिवेदी - तिवारी जी / गुंजन त्रिवेदी)')">
-                        <img src="images/gmaps_photo_2.jpg" alt="त्रिवेदी आयुर्वेदिक औषधालय Hatia Road Rajdhanwar Front View">
+                    <div class="loc-photo-img-wrap" style="height: 240px;" onclick="openGmapsModal('images/real_shop_front.jpg?v=202611', 'त्रिवेदी आयुर्वेदिक औषधालय - मुख्य बोर्ड एवं दुकान का अगला भाग (वैद्य श्री मिथिलेश त्रिवेदी - तिवारी जी / गुंजन त्रिवेदी)')">
+                        <img src="images/real_shop_front.jpg?v=202611" alt="त्रिवेदी आयुर्वेदिक औषधालय Hatia Road Rajdhanwar Front View">
                         <span class="loc-photo-tag">📍 Main Storefront & Signboard</span>
                     </div>
                     <div class="loc-photo-body">
@@ -1938,8 +1941,8 @@
 
                 <!-- Photo 2: Consultation Counter & Doctor -->
                 <div class="loc-photo-card reveal">
-                    <div class="loc-photo-img-wrap" style="height: 240px;" onclick="openGmapsModal('images/gmaps_photo_1.jpg', 'वैद्य जी का परामर्श काउंटर, नाड़ी परीक्षण एवं रक्तचाप (BP) जांच सुविधा')">
-                        <img src="images/gmaps_photo_1.jpg" alt="Vaidya Mithilesh Trivedy at Consultation Desk">
+                    <div class="loc-photo-img-wrap" style="height: 240px;" onclick="openGmapsModal('images/real_patient_checkup.jpg?v=202611', 'वैद्य जी का परामर्श काउंटर, नाड़ी परीक्षण एवं रक्तचाप (BP) जांच सुविधा')">
+                        <img src="images/real_patient_checkup.jpg?v=202611" alt="Vaidya Mithilesh Trivedy at Consultation Desk">
                         <span class="loc-photo-tag">🩺 Clinic & Consultation Desk</span>
                     </div>
                     <div class="loc-photo-body">
@@ -1951,8 +1954,8 @@
 
                 <!-- Photo 3: Shop Entrance Pillars -->
                 <div class="loc-photo-card reveal">
-                    <div class="loc-photo-img-wrap" style="height: 240px;" onclick="openGmapsModal('images/gmaps_photo_10.jpg', 'दुकान का मुख्य प्रवेश द्वार - हटीया रोड, राजधनवार')">
-                        <img src="images/gmaps_photo_10.jpg" alt="Trivedy Ayurvedic Shop Entrance Pillars">
+                    <div class="loc-photo-img-wrap" style="height: 240px;" onclick="openGmapsModal('images/real_shop_entrance.jpg?v=202611', 'दुकान का मुख्य प्रवेश द्वार - हटीया रोड, राजधनवार')">
+                        <img src="images/real_shop_entrance.jpg?v=202611" alt="Trivedy Ayurvedic Shop Entrance Pillars">
                         <span class="loc-photo-tag">🏪 Shop Entrance & Walk-in</span>
                     </div>
                     <div class="loc-photo-body">
