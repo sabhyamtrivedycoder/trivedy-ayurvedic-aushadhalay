@@ -586,6 +586,93 @@
             line-height: 1.4;
         }
 
+        .loc-photo-img-wrap {
+            cursor: pointer;
+        }
+
+        .loc-photo-img-wrap::after {
+            content: '🔍 View Full Photo';
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.65);
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.72rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .loc-photo-card:hover .loc-photo-img-wrap::after {
+            opacity: 1;
+        }
+
+        /* Lightbox Modal */
+        .gmaps-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 99999;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            backdrop-filter: blur(8px);
+        }
+
+        .gmaps-modal.active {
+            display: flex;
+        }
+
+        .gmaps-modal img {
+            max-width: 90%;
+            max-height: 82vh;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            object-fit: contain;
+            animation: zoomIn 0.25s ease;
+        }
+
+        .gmaps-modal-caption {
+            color: #fff;
+            margin-top: 15px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: center;
+            max-width: 800px;
+        }
+
+        .gmaps-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            color: #fff;
+            font-size: 2.2rem;
+            cursor: pointer;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            transition: background 0.2s;
+        }
+
+        .gmaps-modal-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
         /* Why Choose Us */
         #features {
             background-color: var(--primary-green);
@@ -1526,25 +1613,28 @@
             </div>
 
             <!-- Shop Location Photo Gallery -->
-            <h3 class="reveal" style="text-align: center; font-size: 1.8rem; color: var(--primary-green); margin-bottom: 2rem;">Real Photos & Verification from Google Maps</h3>
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h3 class="reveal" style="font-size: 2rem; color: var(--primary-green); margin-bottom: 0.5rem;">Authentic Photos Extracted from Google Maps</h3>
+                <p class="reveal" style="color: #666; font-size: 0.95rem;">Click any photo to view in high definition. All photos reflect the real store & clinic on Hatia Road.</p>
+            </div>
             <div class="location-photos-grid">
-                <!-- Photo 1: Real Storefront from Google Maps -->
+                <!-- Photo 1: Storefront Board -->
                 <div class="loc-photo-card reveal">
-                    <div class="loc-photo-img-wrap" style="height: 240px;">
-                        <img src="images/gmaps_2.jpg" alt="त्रिवेदी आयुर्वेदिक औषधालय Hatia Road Rajdhanwar Front View">
-                        <span class="loc-photo-tag">📍 Real Storefront & Signboard</span>
+                    <div class="loc-photo-img-wrap" style="height: 240px;" onclick="openGmapsModal('images/gmaps_photo_2.jpg', 'त्रिवेदी आयुर्वेदिक औषधालय - मुख्य बोर्ड एवं दुकान का अगला भाग (वैद्य श्री मिथिलेश त्रिवेदी - तिवारी जी / गुंजन त्रिवेदी)')">
+                        <img src="images/gmaps_photo_2.jpg" alt="त्रिवेदी आयुर्वेदिक औषधालय Hatia Road Rajdhanwar Front View">
+                        <span class="loc-photo-tag">📍 Main Storefront & Signboard</span>
                     </div>
                     <div class="loc-photo-body">
-                        <h4>त्रिवेदी आयुर्वेदिक औषधालय (दुकान का मुख्य द्वार)</h4>
-                        <p>हटीया रोड, राजधनवार स्थित हमारी दुकान का मुख्य बोर्ड। वैद्य श्री मिथिलेश त्रिवेदी (तिवारी जी) - मो: 8102814677, 7992234393।</p>
+                        <h4>त्रिवेदी आयुर्वेदिक औषधालय</h4>
+                        <p>हटीया रोड, राजधनवार स्थित मुख्य बोर्ड। वैद्य श्री मिथिलेश त्रिवेदी (तिवारी जी) - संपर्क: 8102814677, 7992234393।</p>
                         <a href="https://maps.app.goo.gl/Gc8mCkgymzpob4Lz6" target="_blank" style="font-size: 0.8rem; color: var(--primary-green); font-weight: 600; text-decoration: underline;">View on Google Maps &rarr;</a>
                     </div>
                 </div>
 
-                <!-- Photo 2: Vaidya ji at Counter from Google Maps -->
+                <!-- Photo 2: Consultation Counter & Doctor -->
                 <div class="loc-photo-card reveal">
-                    <div class="loc-photo-img-wrap" style="height: 240px;">
-                        <img src="images/gmaps_1.jpg" alt="Vaidya Mithilesh Trivedy at Consultation Desk">
+                    <div class="loc-photo-img-wrap" style="height: 240px;" onclick="openGmapsModal('images/gmaps_photo_1.jpg', 'वैद्य जी का परामर्श काउंटर, नाड़ी परीक्षण एवं रक्तचाप (BP) जांच सुविधा')">
+                        <img src="images/gmaps_photo_1.jpg" alt="Vaidya Mithilesh Trivedy at Consultation Desk">
                         <span class="loc-photo-tag">🩺 Clinic & Consultation Desk</span>
                     </div>
                     <div class="loc-photo-body">
@@ -1554,10 +1644,10 @@
                     </div>
                 </div>
 
-                <!-- Photo 3: Shop Entrance from Google Maps -->
+                <!-- Photo 3: Shop Entrance Pillars -->
                 <div class="loc-photo-card reveal">
-                    <div class="loc-photo-img-wrap" style="height: 240px;">
-                        <img src="images/gmaps_3.jpg" alt="Trivedy Ayurvedic Shop Entrance Pillars">
+                    <div class="loc-photo-img-wrap" style="height: 240px;" onclick="openGmapsModal('images/gmaps_photo_10.jpg', 'दुकान का मुख्य प्रवेश द्वार - हटीया रोड, राजधनवार')">
+                        <img src="images/gmaps_photo_10.jpg" alt="Trivedy Ayurvedic Shop Entrance Pillars">
                         <span class="loc-photo-tag">🏪 Shop Entrance & Walk-in</span>
                     </div>
                     <div class="loc-photo-body">
@@ -1567,9 +1657,9 @@
                     </div>
                 </div>
 
-                <!-- Photo 4: Official Google Maps Listing Screenshot -->
+                <!-- Photo 4: Verified Google Maps Profile Record -->
                 <div class="loc-photo-card reveal">
-                    <div class="loc-photo-img-wrap" style="height: 240px;">
+                    <div class="loc-photo-img-wrap" style="height: 240px;" onclick="openGmapsModal('images/gmaps_listing_proof.png', 'गूगल मैप्स प्रमाणित 5.0★ प्रोफाइल - 20+ मरीजों द्वारा शत-प्रतिशत 5-स्टार रेटिंग')">
                         <img src="images/gmaps_listing_proof.png" alt="Google Maps 5.0 Star Verified Business Profile" style="object-position: top center;">
                         <span class="loc-photo-tag">⭐ 5.0★ Google Maps Profile</span>
                     </div>
@@ -1580,29 +1670,81 @@
                     </div>
                 </div>
 
-                <!-- Photo 5: Medicine Shelves Stock -->
+                <!-- Photo 5: Medicine Inventory Shelves -->
                 <div class="loc-photo-card reveal">
-                    <div class="loc-photo-img-wrap" style="height: 240px;">
-                        <img src="images/medicine_counter.jpg" alt="Ayurvedic Medicine Stock">
-                        <span class="loc-photo-tag">💊 100% In-Store Stock</span>
+                    <div class="loc-photo-img-wrap" style="height: 240px;" onclick="openGmapsModal('images/gmaps_photo_5.jpg', 'दुकान के अंदर प्रामाणिक आयुर्वेदिक दवाओं के रैक - बैद्यनाथ, डाबर, पतंजलि')">
+                        <img src="images/gmaps_photo_5.jpg" alt="Authentic Ayurvedic Medicine Shelves Stock">
+                        <span class="loc-photo-tag">💊 Medicine Shelves & Stock</span>
                     </div>
                     <div class="loc-photo-body">
-                        <h4>प्रामाणिक आयुर्वेदिक औषधियां</h4>
-                        <p>सभी क्लासिकल आसव, अरिष्ट, रस, भस्म एवं सिरप उपलब्ध। ध्यान दें: हम केवल दुकान से बिक्री करते हैं, होम डिलीवरी नहीं करते।</p>
+                        <h4>प्रामाणिक दवाओं का विशाल संग्रह</h4>
+                        <p>बैद्यनाथ, डाबर, झंडू, हमदर्द और पतंजलि की दुर्लभ क्लासिकल एवं पेटेंट दवाइयां उपलब्ध। केवल दुकान से इन-स्टोर बिक्री।</p>
                         <span style="font-size: 0.8rem; color: #b86200; font-weight: 600;">In-Store Purchase Only</span>
                     </div>
                 </div>
 
-                <!-- Photo 6: Patient Checkup -->
+                <!-- Photo 6: Classical Herbal Formulations -->
                 <div class="loc-photo-card reveal">
-                    <div class="loc-photo-img-wrap" style="height: 240px;">
-                        <img src="images/patient_checkup.jpg" alt="Ayurvedic Pulse Diagnosis and Health Checkup">
-                        <span class="loc-photo-tag">❤️ Nadi Parikshan & Checkup</span>
+                    <div class="loc-photo-img-wrap" style="height: 240px;" onclick="openGmapsModal('images/gmaps_photo_4.jpg', 'क्लासिकल आयुर्वेदिक रस, भस्म, आसव एवं अरिष्ट संग्रह')">
+                        <img src="images/gmaps_photo_4.jpg" alt="Classical Ayurvedic Medicine Bottles">
+                        <span class="loc-photo-tag">🌿 Classical Herbal Stock</span>
                     </div>
                     <div class="loc-photo-body">
-                        <h4>नाड़ी परीक्षण एवं रोगी जांच</h4>
-                        <p>अनुभवी वैद्य जी द्वारा नाड़ी देखकर रोग की जड़ का पता लगाना, वात-पित्त-कफ का संतुलन और सुरक्षित आयुर्वेदिक उपचार।</p>
+                        <h4>क्लासिकल आसव, अरिष्ट एवं भस्म</h4>
+                        <p>परंपरागत विधि से निर्मित शुद्ध आयुर्वेदिक योग, जो कठिन एवं जीर्ण रोगों के उपचार में अत्यंत प्रभावी हैं।</p>
+                        <span style="font-size: 0.8rem; color: #b86200; font-weight: 600;">100% Genuine Herbs</span>
+                    </div>
+                </div>
+
+                <!-- Photo 7: Ayurvedic Oils & Syrups -->
+                <div class="loc-photo-card reveal">
+                    <div class="loc-photo-img-wrap" style="height: 240px;" onclick="openGmapsModal('images/gmaps_photo_6.jpg', 'दर्द निवारक तेल, चूर्ण एवं स्वास्थ्यवर्धक सिरप')">
+                        <img src="images/gmaps_photo_6.jpg" alt="Ayurvedic Pain Relief Oils and Syrups">
+                        <span class="loc-photo-tag">🧴 Oils & Health Formulations</span>
+                    </div>
+                    <div class="loc-photo-body">
+                        <h4>हर्बल तेल एवं स्वास्थ्य सिरप</h4>
+                        <p>वात रोग, जोड़ों का दर्द, पाचन तंत्र एवं कमजोरी निवारक सभी मुख्य कंपनियों के पेटेंट एवं शास्त्रीय तेल उपलब्ध।</p>
+                        <span style="font-size: 0.8rem; color: #b86200; font-weight: 600;">Authentic Products</span>
+                    </div>
+                </div>
+
+                <!-- Photo 8: Consultation Room View -->
+                <div class="loc-photo-card reveal">
+                    <div class="loc-photo-img-wrap" style="height: 240px;" onclick="openGmapsModal('images/gmaps_photo_7.jpg', 'मरीज परामर्श एवं नाड़ी परीक्षण क्षेत्र')">
+                        <img src="images/gmaps_photo_7.jpg" alt="Ayurvedic Doctor Consultation Area">
+                        <span class="loc-photo-tag">❤️ Consultation Area</span>
+                    </div>
+                    <div class="loc-photo-body">
+                        <h4>चिकित्सक परामर्श क्षेत्र</h4>
+                        <p>शांत एवं स्वच्छ वातावरण में प्रत्येक रोगी की समस्याओं को ध्यानपूर्वक सुनकर व्यक्तिगत परामर्श एवं पथ्य-अपथ्य निर्देश।</p>
                         <a href="#clinic" style="font-size: 0.8rem; color: var(--primary-green); font-weight: 600; text-decoration: underline;">Check Clinic Timings &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Photo 9: Racks and Churna Displays -->
+                <div class="loc-photo-card reveal">
+                    <div class="loc-photo-img-wrap" style="height: 240px;" onclick="openGmapsModal('images/gmaps_photo_8.jpg', 'कंपनी अनुसार व्यवस्थित दवाइयां एवं सिरप संग्रह')">
+                        <img src="images/gmaps_photo_8.jpg" alt="Organized Ayurvedic Medicine Racks">
+                        <span class="loc-photo-tag">🏷️ Organized Medicine Racks</span>
+                    </div>
+                    <div class="loc-photo-body">
+                        <h4>व्यवस्थित मेडिसिन काउंटर</h4>
+                        <p>दवाइयों का सुव्यवस्थित रखरखाव ताकि हर मरीज को अपनी जरूरत की औषधि तुरंत एवं उचित बैच/एक्सपायरी के साथ मिले।</p>
+                        <span style="font-size: 0.8rem; color: #b86200; font-weight: 600;">Quality Assured</span>
+                    </div>
+                </div>
+
+                <!-- Photo 10: In-Store Pharmacy View -->
+                <div class="loc-photo-card reveal">
+                    <div class="loc-photo-img-wrap" style="height: 240px;" onclick="openGmapsModal('images/gmaps_photo_3.jpg', 'त्रिवेदी आयुर्वेदिक औषधालय - इन-स्टोर फार्मेसी एवं इन्वेंटरी')">
+                        <img src="images/gmaps_photo_3.jpg" alt="In-Store Pharmacy View">
+                        <span class="loc-photo-tag">🏪 In-Store Pharmacy</span>
+                    </div>
+                    <div class="loc-photo-body">
+                        <h4>पूर्ण इन-स्टोर इन्वेंटरी</h4>
+                        <p>राजधनवार एवं आसपास के क्षेत्रों के मरीजों के लिए विश्वसनीय आयुर्वेदिक केंद्र। दवाइयां केवल दुकान पर उपलब्ध हैं।</p>
+                        <span style="font-size: 0.8rem; color: #b86200; font-weight: 600;">No Delivery &bull; Walk-in Only</span>
                     </div>
                 </div>
             </div>
@@ -1711,6 +1853,13 @@
         </div>
     </footer>
 
+    <!-- Lightbox Modal for Google Maps Photos -->
+    <div id="gmapsModal" class="gmaps-modal" onclick="closeGmapsModal(event)">
+        <span class="gmaps-modal-close" onclick="closeGmapsModal()">&times;</span>
+        <img id="gmapsModalImg" src="" alt="Google Maps Photo Preview">
+        <div id="gmapsModalCaption" class="gmaps-modal-caption"></div>
+    </div>
+
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/918102814677?text=Hello%20Trivedy%20Ayurvedic,%20I%20have%20an%20enquiry." target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
@@ -1720,6 +1869,28 @@
 
     <!-- Scripts -->
     <script>
+        // Lightbox Modal for Photos
+        function openGmapsModal(src, caption) {
+            const modal = document.getElementById('gmapsModal');
+            const modalImg = document.getElementById('gmapsModalImg');
+            const modalCaption = document.getElementById('gmapsModalCaption');
+            modalImg.src = src;
+            modalCaption.textContent = caption || '';
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGmapsModal(e) {
+            if (e && e.target && e.target.id === 'gmapsModalImg') return;
+            const modal = document.getElementById('gmapsModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeGmapsModal();
+        });
+
         // Mobile Navigation Toggle
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
